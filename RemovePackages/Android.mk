@@ -8,8 +8,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     AmbientSensePrebuilt \
     arcore \
     Camera2 \
-    Chrome \
-    Chrome-Stub \
     ConnMO \
     ConnMetrics \
     DCMO \
@@ -28,7 +26,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     OPScreenRecord \
     Ornament \
     PixelLiveWallpaperPrebuilt \
-    Photos \
     PlayAutoInstallConfig \
     PrebuiltGmail \
     RecorderPrebuilt \
@@ -42,7 +39,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     SoundAmplifierPrebuilt \
     SprintDM \
     SprintHM \
-    Tycho \
     USCCDM \
     Videos \
     VZWAPNLib \
