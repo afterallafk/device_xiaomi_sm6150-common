@@ -16,6 +16,9 @@ iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
 vendor.iop.enable_prefetch_ofr=1
 
+# Keyguard
+persist.wm.enable_remote_keyguard_animation=0
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
