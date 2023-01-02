@@ -1,6 +1,10 @@
 # Bluetooth
 vendor.bluetooth.soc=cherokee
 
+# Battery Saving
+ro.ril.disable.power.collapse=1
+pm.sleep_mode=1
+
 # Charger
 ro.charger.enable_suspend=true
 
