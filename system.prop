@@ -52,6 +52,9 @@ debug.cpurend.vsync=false
 # Recovery
 ro.recovery.ui.margin_height=48
 
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
+
 # WiFi
 wifi.interface=wlan0
 
