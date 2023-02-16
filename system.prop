@@ -5,6 +5,9 @@ vendor.bluetooth.soc=cherokee
 ro.ril.disable.power.collapse=1
 pm.sleep_mode=1
 
+# Camera
+vendor.camera.aux.packagelist=org.lineageos.snap,com.android.camera
+
 # Charger
 ro.charger.enable_suspend=true
 
