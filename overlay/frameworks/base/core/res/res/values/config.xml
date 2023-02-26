@@ -311,4 +311,7 @@
 
     <!-- Determines whether the shell features all run on another thread. -->
     <bool name="config_enableShellMainThread">true</bool>
+
+    <!-- Boost Framework -->
+    <bool name="config_supportsBoostFramework">true</bool>
 </resources>
