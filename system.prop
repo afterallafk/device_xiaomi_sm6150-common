@@ -87,6 +87,9 @@ persist.service.pcsync.enable=0
 # WiFi
 wifi.interface=wlan0
 
+# Watchdog
+ro.hw_timeout_multiplier=3
+
 # Zygote preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
 
