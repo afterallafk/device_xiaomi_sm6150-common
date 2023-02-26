@@ -205,6 +205,7 @@ persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.report_codec=1
 persist.vendor.radio.sib16_support=1
+ro.telephony.block_binder_thread_on_incoming_calls=false
 
 # Suspend properties
 suspend.short_suspend_threshold_millis=2000
