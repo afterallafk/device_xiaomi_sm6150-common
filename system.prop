@@ -22,6 +22,9 @@ ro.surface_flinger.running_without_sync_framework=true
 # DHA Tunning
 ro.config.dha_tunnable=1
 
+# Graphics
+debug.sf.enable_transaction_tracing=false
+
 # Iorap
 iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
