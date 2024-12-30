@@ -27,10 +27,17 @@ namespace_imports = [
     'vendor/qcom/opensource/display',
 ]
 
-
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
+def custom_blob_fixup(blob_name: str, blob_path: str):
+    """
+    Custom blob fixup logic to add 'libcrypto_shim.so' dependency.
+    """
+    if blob_name in ['vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so']:
+        if 'libcrypto_shim.so' not in blob_path:  # Mimics `grep -q` logic
+            from subprocess import run
+            run([PATCHELF, '--add-needed', 'libcrypto_shim.so', blob_path], check=True)
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
@@ -45,10 +52,8 @@ lib_fixups: lib_fixups_user_type = {
     ): lib_fixup_remove,
 }
 
-
 blob_fixups: blob_fixups_user_type = {
-    ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
-        .add_needed('libcrypto_shim.so'),
+    ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): custom_blob_fixup,
 }  # fmt: skip
 
 module = ExtractUtilsModule(
